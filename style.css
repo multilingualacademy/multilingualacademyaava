@@ -32,9 +32,6 @@
     --audio-controls-width: 450px;
 }
 
-html {
-    cursor: auto !important;
-}
 
 
 /* --- Estilos Generales --- */
@@ -90,6 +87,7 @@ body {
     cursor: grabbing;
 }
 
+
 img {
     width: auto;
     height: auto;
@@ -100,8 +98,6 @@ img {
     filter: contrast(1.03) brightness(1.02) saturate(1.03);
     transform: scale(1.02dd);
   }
-  
-
 
 /* --- Controles Generales --- */
 .controls {
@@ -320,6 +316,7 @@ button:disabled {
 /* --- Media Queries --- */
 
 /* Pantallas medianas */
+/*
 @media screen and (max-width: 768px) {
     .controls {
         flex-direction: column;
@@ -366,9 +363,9 @@ button:disabled {
         min-width: 120px;
     }
 }
-
+*/
 /* Pantallas pequeñas */
-@media screen and (max-width: 480px) {
+/*@media screen and (max-width: 480px) {
     .controls button,
     .zoom-controls button,
     .audio-controls button {
@@ -410,7 +407,7 @@ button:disabled {
         max-width: 300px;
     }
 }
-
+*/
 /* Modo Landscape */
 @media screen and (max-height: 480px) and (orientation: landscape) {
     .audio-controls {
@@ -421,11 +418,7 @@ button:disabled {
     }
 
     .zoom-controls {
-        flex-direction: row;
-        top: auto;
-        bottom: 70px;
-        right: 50%;
-        transform: translateX(50%);
+        display: none;
     }
 
     .controls {
@@ -438,7 +431,15 @@ button:disabled {
     }
 }
 
-
+/* Ocultar ciertos controles en mobile */
+@media (max-width: 768px) {
+    .skip-buttons,
+    .progress-bar,
+    .volume-control,
+    #goToPageBtn {
+        display: none;
+    }
+} 
 /* --- Controles de Audio --- */
 .audio-controls {
     position: fixed;
@@ -575,7 +576,29 @@ button:disabled {
 }
 
 /* Actualizar los media queries existentes */
-@media screen and (max-width: 768px) {
+
+#lessonSelector {
+    padding: 5px;
+    font-size: 9px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #000000;
+    cursor: pointer;
+    width: 70px;
+}
+
+#lessonSelector:hover {
+    border-color: #555;
+}
+
+
+
+
+
+
+
+/*@media screen and (max-width: 768px) {
     .audio-controls {
         width: calc(100% - 40px);
         flex-direction: column;
@@ -613,18 +636,32 @@ button:disabled {
         width: 80px;
     }
 }
+*/
 
-#lessonSelector {
-    padding: 5px;
-    font-size: 9px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #fff;
-    color: #333;
-    cursor: pointer;
-    width: 70px;
-}
 
-#lessonSelector:hover {
-    border-color: #555;
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Ocultar ciertos controles en mobile */
+@media (max-width: 768px) {
+    .ocultar-en-movil,
+    .skip-buttons,
+    .progress-bar,
+    .volume-control,
+    #goToPageBtn {
+       visibility: hidden;
+       display: none;
+       opacity: 0;
+       pointer-events: none;
+    }
 }

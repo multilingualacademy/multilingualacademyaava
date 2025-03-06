@@ -23,9 +23,9 @@
             &nbsp;<span id="currentPage">1</span>&nbsp;/&nbsp;<span id="totalPages">0</span>
         </span>
         <button id="nextBtn" onclick="nextPage()">Weiter</button>
-        <input type="number" id="pageInput" placeholder="Gehen" min="1"
+        <input type="number" id="pageInput" class="ocultar-en-movil" placeholder="Gehen" min="1"
             style="text-align: center; border: none; border-bottom: 2px solid #000; outline: none;">
-        <button id="goToPageBtn" onclick="goToPage()">Gehen</button>
+        <button id="goToPageBtn" class="ocultar-en-movil" onclick="goToPage()">Gehen</button>
         <!-- Nuevo selector de lecciones -->
         <select id="lessonSelector" onchange="goToLesson()">
             <!-- Opciones de lecciones se llenarán dinámicamente -->
@@ -56,21 +56,21 @@
         <!-- Botón Play/Pause -->
         <button id="playPauseBtn">Abspielen</button>
 
-        <div class="skip-buttons">
+        <div class="skip-buttons ocultar-en-movil">
             <button class="skip-button" id="rewindBtn">
                 <<< </button>
                     <button class="skip-button" id="forwardBtn"> >>> </button>
         </div>
 
         <!-- Barra de Progreso -->
-        <div class="progress-bar" id="progress-bar">
+        <div class="progress-bar ocultar-en-movil" id="progress-bar">
             <div class="progress" id="progress"></div>
         </div>
 
         <!-- Tiempo actual y duración -->
         <span id="current-time">0:00</span> / <span id="duration">0:00</span>
 
-        <div class="volume-control"> <span style="font-size: 10px; font-weight: bold; ">Vol</span>
+        <div class="volume-control ocultar-en-movil"> <span style="font-size: 10px; font-weight: bold; ">Vol</span>
             <input type="range" id="volumeSlider" min="0" max="1" step="0.1" value="1">
         </div>
 
@@ -94,7 +94,7 @@
 
 
     <!-- Controles de zoom -->
-    <div class="zoom-controls">
+    <div class="zoom-controls ocultar-en-movil">
         <button onclick="zoomIn()">+</button>
         <button onclick="zoomOut()"> -</button>
         <button onclick="resetZoom()">Zurücksetzen</button>
