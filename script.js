@@ -521,6 +521,8 @@ const urlsAudios = [
 const VALID_CREDENTIALS = [
     { username: "1", password: "1" },
     { username: "user1", password: "pass1" },
+    { username: "feliperrO", password: "lolitateamO" },
+
 ];
 
 // --- Elementos del DOM ---
